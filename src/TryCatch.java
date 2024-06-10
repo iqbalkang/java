@@ -8,6 +8,7 @@ public class TryCatch {
     public static void hopeForTheBest() {
         int[] array = {1, 2, 3, 4, 5, 0};
 
+
         try {
             int result = array[4] / array[1];
             System.out.println(result);
