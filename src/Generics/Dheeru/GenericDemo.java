@@ -1,9 +1,10 @@
 package Generics.Dheeru;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class GenericDemo {
+public class GenericDemo <T extends List> {
     public static void main(String[] args) {
 
         Container<String> stringStore = new Store<>();
@@ -18,7 +19,13 @@ public class GenericDemo {
         listStore.set(Arrays.asList(2, 4, 1, 5, 7));
         System.out.println(listStore.get());
 
+        GenericDemo<ArrayList> gd = new GenericDemo<>();
     }
+
+    public void go(T list) {
+        list.add(1);
+    }
+
 }
 
 interface Container<T> {
